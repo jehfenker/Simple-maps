@@ -2,7 +2,7 @@
 #### Australian National University  ####
 ####    jehfenker@gmail.com          ####
 
-## This script is an easy way to plot a map with dismo and rgdal
+## This script shows how to easily plot a map with dismo and rgdal
 ## prettymapr is used for the north arrow
 
 
