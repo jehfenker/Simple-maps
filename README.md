@@ -1,6 +1,6 @@
 # Simple-maps
 
-Random R scripts for fast visualizations of maps in R.
+Random scripts for fast visualizations of maps in R.
 
 Map example with ggplot    |  Map example with rgdal   |  Map example with dist and genetic sampling
 :-------------------------:|:-------------------------:|:-------------------------:
