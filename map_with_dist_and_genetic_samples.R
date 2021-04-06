@@ -1,9 +1,9 @@
-####      Jessica Fenker 2019        ####
+####      Jessica Fenker 2018        ####
 #### Australian National University  ####
 ####    jehfenker@gmail.com          ####
 
-## This script is an easy way to plot a distribution map
-## of one species at a time, from a species list, diffenrentiating
+## This is a relatively old (and not straightforward) script to plot a distribution
+## map, one species at a time, from a species list, diffenrentiating
 ## distribution samples and genetic data only. 
 
 
