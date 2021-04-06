@@ -2,7 +2,7 @@
 #### Australian National University  ####
 ####    jehfenker@gmail.com          ####
 
-## This script is an easy way to plot a map with ggplot2
+## This script presents an easy way to plot a map with ggplot2
 
 #install necessary packages
 packages_to_install <- c("ggplot2","raster")
@@ -22,11 +22,11 @@ setwd("~/jessica/easy_map")
 world <- map_data('world')
 
 #import your data from CSV
-australis = read.csv("australis.csv")
+australis <- read.csv("australis.csv")
 
 #specify the colours for each species
 # https://colorbrewer2.org/ has some colorblind options
-sp_colors = c("#8856a7", "#e66101","#a6dba0", "#abd9e9")
+sp_colors <- c("#8856a7", "#e66101","#a6dba0", "#abd9e9")
 
 
 #######################
