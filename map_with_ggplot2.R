@@ -34,11 +34,11 @@ sp_colors = c("#8856a7", "#e66101","#a6dba0", "#abd9e9")
 #######################
 
 #create a ggplot object
-map<-ggplot(world, aes(long, lat)) +
+dist_map<-ggplot(world, aes(long, lat)) +
   #set map coordinates
-  lims(x = c(121, 143), y = c(-22, -11))+
+  lims(x = c(122, 140.5), y = c(-20, -11.2))+
   #define the color of the land and outline
-  geom_map(map=world, aes(map_id=region), fill="grey", color="black") +
+  geom_map(map=world, aes(map_id=region), fill="grey90", color="black") +
   #remove gridlines from the map
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
         panel.background = element_blank(), axis.line = element_line(colour = "black"))+
@@ -46,7 +46,7 @@ map<-ggplot(world, aes(long, lat)) +
   #plot the species points on the map, color by the column that you want (in this case, species)
   geom_point(aes(x=long, y=lat, color = species, size = 1), data=australis)+
   #if you want, plot the species point border
-  geom_point(aes(x=long, y=lat), color = "gray29", size = 4.5, pch=21, data=australis)+
+  geom_point(aes(x=long, y=lat), color = "gray17", size = 4.5, pch=21, data=australis)+
   #colour the points using the colors you selected previously
   scale_color_manual(values=sp_colors) +
   #you can add/remove a legend, as wantes
@@ -63,10 +63,14 @@ map<-ggplot(world, aes(long, lat)) +
   annotation_north_arrow(location = "br", which_north = "true", 
                          height = unit(1, "cm"), width = unit(1, "cm"),
                          pad_x = unit(0.05, "cm"), pad_y = unit(0.2, "cm"),
-                         style = north_arrow_fancy_orienteering)
+                         style = north_arrow_fancy_orienteering)+
+   #add a border to your map
+   theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_rect(colour = "black", fill="#f7fcfd", size=0.5))
 
 # call the map
-map
+dist_map
 
 #save the object as an PDF or SVG file
 pdf("australis_map.pdf")
